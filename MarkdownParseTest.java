@@ -17,4 +17,11 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
         assertEquals(List.of("https://something.com","some-page.html"), MarkdownParse.getLinks(Files.readString(fileName)));
     }
+
+    @Test 
+    public void testingEmpty()throws IOException{
+        Path fileName=Path.of("test-empty.md");
+        System.out.println(fileName);
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(fileName)));
+    }
 }
