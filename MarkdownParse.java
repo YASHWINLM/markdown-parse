@@ -22,6 +22,7 @@ public class MarkdownParse {
     }
 
     public static ArrayList<String> getLinksFromLine(String markdown) {
+        System.out.println("yashwin fork");
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then take up to
         // the next )
