@@ -29,4 +29,10 @@ public class MarkdownParseTest {
         System.out.println(fileName);
         assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(fileName)));
     }
+
+    public void testingEmpty2()throws IOException{
+        Path fileName=Path.of("test-empty.md");
+        System.out.println(fileName);
+        assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(fileName)));
+    }
 }
