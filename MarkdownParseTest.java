@@ -13,6 +13,11 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void additionbad() {
+        assertEquals(3, 1 + 1);
+    }
+
+    @Test
     public void testingGenericFile() throws IOException{
         Path fileName = Path.of("test-file.md");
         assertEquals(List.of("https://something.com","some-page.html"), MarkdownParse.getLinks(Files.readString(fileName)));
