@@ -43,11 +43,20 @@ public class MarkdownParseTest {
         
     // }
 
+    // @Test
+    // public void testingSnippet2()throws IOException{
+    //     Path fileName=Path.of("snippet-2.md");
+    //     assertEquals(List.of("a.com", "a.com(())", "example.com"), MarkdownParse.getLinks(Files.readString(fileName)));
+        
+    // }
+
     @Test
-    public void testingSnippet2()throws IOException{
-        Path fileName=Path.of("snippet-2.md");
-        assertEquals(List.of("a.com", "a.com(())", "example.com"), MarkdownParse.getLinks(Files.readString(fileName)));
+    public void testingSnippet3()throws IOException{
+        Path fileName=Path.of("snippet-3.md");
+        assertEquals(List.of("https://www.twitter.com", "https://ucsd-cse15l-w22.github.io/", "https://cse.ucsd.edu/"), MarkdownParse.getLinks(Files.readString(fileName)));
         
     }
+
+    
 
 }
