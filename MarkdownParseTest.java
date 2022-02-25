@@ -36,12 +36,12 @@ public class MarkdownParseTest {
     //     assertEquals(List.of(), MarkdownParse.getLinks(Files.readString(fileName)));
     // }
 
-    // @Test
-    // public void testingSnippet1()throws IOException{
-    //     Path fileName=Path.of("snippet-1.md");
-    //     assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), MarkdownParse.getLinks(Files.readString(fileName)));
+    @Test
+    public void testingSnippet1()throws IOException{
+        Path fileName=Path.of("snippet-1.md");
+        assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), MarkdownParse.getLinks(Files.readString(fileName)));
         
-    // }
+    }
 
     @Test
     public void testingSnippet2()throws IOException{
@@ -50,12 +50,12 @@ public class MarkdownParseTest {
         
     }
 
-    // @Test
-    // public void testingSnippet3()throws IOException{
-    //     Path fileName=Path.of("snippet-3.md");
-    //     assertEquals(List.of("https://www.twitter.com", "https://ucsd-cse15l-w22.github.io/", "https://cse.ucsd.edu/"), MarkdownParse.getLinks(Files.readString(fileName)));
+    @Test
+    public void testingSnippet3()throws IOException{
+        Path fileName=Path.of("snippet-3.md");
+        assertEquals(List.of("https://www.twitter.com", "https://ucsd-cse15l-w22.github.io/", "https://cse.ucsd.edu/"), MarkdownParse.getLinks(Files.readString(fileName)));
         
-    // }
+    }
 
     
 
