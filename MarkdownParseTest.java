@@ -67,36 +67,44 @@ import java.util.List;
 
 
 public class MarkdownParseTest {
-    @Test
-    public void addition() {
-        assertEquals(2, 1 + 1);
-    }
 
     @Test
-    public void getLinks() throws IOException{
-        Path fileName = Path.of("./test-file.md");
-	    String contents = Files.readString(fileName);
-        assertEquals(List.of("https://something.com", "some-page.html"), MarkdownParse.getLinks(contents));
+    public void testingSnippet1()throws IOException{
+        Path fileName=Path.of("snippet-1.md");
+        assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), MarkdownParse.getLinks(Files.readString(fileName)));
+        
     }
 
-    @Test
-    public void getLinks1() throws IOException{
-        Path fileName = Path.of("./test2-file.md");
-	    String contents = Files.readString(fileName);
-        assertEquals( List.of("link.com"), MarkdownParse.getLinks(contents));
-    }
-    @Test
-    public void getLinks2() throws IOException{
-        Path fileName = Path.of("./test3-file.md");
-	    String contents = Files.readString(fileName);
-        assertEquals(List.of("link.com"), MarkdownParse.getLinks(contents));
-    }
-    @Test
-    public void getLinks3() throws IOException{
-        Path fileName = Path.of("./test4-file.md");
-	    String contents = Files.readString(fileName);
-        assertEquals(List.of(), MarkdownParse.getLinks(contents));
-    }
+    // @Test
+    // public void addition() {
+    //     assertEquals(2, 1 + 1);
+    // }
+
+    // @Test
+    // public void getLinks() throws IOException{
+    //     Path fileName = Path.of("./test-file.md");
+	//     String contents = Files.readString(fileName);
+    //     assertEquals(List.of("https://something.com", "some-page.html"), MarkdownParse.getLinks(contents));
+    // }
+
+    // @Test
+    // public void getLinks1() throws IOException{
+    //     Path fileName = Path.of("./test2-file.md");
+	//     String contents = Files.readString(fileName);
+    //     assertEquals( List.of("link.com"), MarkdownParse.getLinks(contents));
+    // }
+    // @Test
+    // public void getLinks2() throws IOException{
+    //     Path fileName = Path.of("./test3-file.md");
+	//     String contents = Files.readString(fileName);
+    //     assertEquals(List.of("link.com"), MarkdownParse.getLinks(contents));
+    // }
+    // @Test
+    // public void getLinks3() throws IOException{
+    //     Path fileName = Path.of("./test4-file.md");
+	//     String contents = Files.readString(fileName);
+    //     assertEquals(List.of(), MarkdownParse.getLinks(contents));
+    // }
    
 }
 
